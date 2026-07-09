@@ -8,6 +8,8 @@ RUN apt-get update \
         manpages \
         less \
         sudo \
+    && set +o pipefail \
+    && yes | unminimize \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir bash_kernel==0.9.3 \

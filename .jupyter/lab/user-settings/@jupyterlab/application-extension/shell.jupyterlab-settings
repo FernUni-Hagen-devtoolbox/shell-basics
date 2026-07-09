@@ -1,0 +1,11 @@
+{
+  "startMode": "multiple",
+  "layout": {
+    "single": {
+      "Terminal": { "area": "down" }
+    },
+    "multiple": {
+      "Terminal": { "area": "right" }
+    }
+  }
+}

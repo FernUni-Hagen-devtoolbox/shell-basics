@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir bash_kernel==0.9.3 \
     && python -m bash_kernel.install
 
 RUN printf '%s\n' \
-    'jovyan ALL=(root) NOPASSWD: /usr/sbin/useradd, /usr/sbin/usermod, /usr/sbin/groupadd, /usr/sbin/groupmod, /usr/bin/passwd, /usr/sbin/chpasswd, /usr/bin/getent' \
+    'jovyan ALL=(root) NOPASSWD: /usr/sbin/useradd, /usr/sbin/usermod, /usr/sbin/groupadd, /usr/sbin/groupmod, /usr/bin/passwd, /usr/sbin/chpasswd, /usr/bin/getent, /usr/bin/chgrp' \
     > /etc/sudoers.d/jovyan-user-management \
     && chmod 0440 /etc/sudoers.d/jovyan-user-management
 

@@ -18,6 +18,9 @@ RUN printf '%s\n' \
     > /etc/sudoers.d/jovyan-user-management \
     && chmod 0440 /etc/sudoers.d/jovyan-user-management
 
+COPY --chown=${NB_UID}:${NB_GID} lesson-content/ /home/jovyan/
+COPY --chown=${NB_UID}:${NB_GID} .jupyter/ /home/jovyan/.jupyter/
+
 WORKDIR /home/jovyan
 
 USER ${NB_UID}

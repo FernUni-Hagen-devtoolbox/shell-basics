@@ -1,2 +1,13 @@
 .ipynb_checkpoints/
 .env/
+.bash_history
+.ipython/
+.local/
+.npm/
+.jupyter/migrated
+lesson-content/.bash_history
+lesson-content/.ipynb_checkpoints/
+lesson-content/.ipython/
+lesson-content/.jupyter/
+lesson-content/.local/
+lesson-content/.npm/

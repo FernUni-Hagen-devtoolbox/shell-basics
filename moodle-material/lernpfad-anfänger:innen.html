@@ -1,0 +1,268 @@
+<p>In dieser Einheiten lernen Sie die Grundlagen der Shell-Nutzung. Die
+  folgenden Lernziele geben Ihnen einen Eindruck davon, was sie im Laufe der
+  Bearbeitung erwartet.</p>
+<div class="alert alert-info">
+  <h5><strong>Lernziele</strong></h5>
+  <p>Nach der Bearbeitung dieser Einheit</p>
+  <ul>
+    <li>können Sie eine Shell starten und beenden</li>
+    <li>verstehen Sie den Aufbau von Shell-Befehlen</li>
+    <li>können Sie innerhalb des Dateisystems navigieren</li>
+    <li>können Sie Dateien und Verzeichnisse verwalten</li>
+    <li>wissen Sie, wie Sie in unklaren Situationen innerhalb der Shell Hilfe
+      bekommen</li>
+    <li>verstehen Sie die Grundlagen der Zugriffsverwaltung mithilfe von Rechten
+    </li>
+  </ul>
+</div>
+<p>Bevor Sie mit der Bearbeitung auf dieser Seite weiter machen, empfehlen wir
+  Ihnen das Spiel <strong>Terminus</strong> in ihrem Browser zu spielen. Sie
+  finden es unter dem Reiter <a
+    href="https://moodle.fernuni-hagen.de/course/view.php?id=5864&amp;section=4"
+    target="_blank" rel="noopener">Terminus (Spiel)</a>. </p>
+<h4> </h4>
+<h4>Erste Schritte in der Shell</h4>
+<p>Sie haben im Reiter <a
+    href="https://moodle.fernuni-hagen.de/course/view.php?id=5864&amp;section=3"
+    target="_blank" rel="noopener">Motivation und Hintergrund</a> gelernt, was
+  eine Shell ist und welche Vorteile die Nutzung mit sich bringt. Wir starten in
+  diesem Abschnitt mit der grundlegenden Bedienung: Starten sowie Beenden einer
+  Shell, dem Aufbau von Befehlen und der ersten, simplen Navigation durch das
+  Dateisystem.</p>
+<h6><strong>Starten und Stoppen einer Shell</strong></h6>
+<p>Wir erhalten Zugang zur Shell über ein Terminal. Ein Terminal zu starten
+  ist je nach Betriebssystem unterschiedlich.</p>
+<p style="text-align: center;"><img class="img-fluid"
+    src="https://moodle.fernuni-hagen.de/draftfile.php/3243/user/draft/727741407/betriebssysteme.png"
+    alt="Das Windows-Symbol, Tux der Pinguin und das Apple-Logo" width="350">
+</p>
+<p>Unter <strong>Linux</strong> müssen Sie lediglich das entsprechende
+  Terminal-Programm finden und starten. Gängige Varianten sind:</p>
+<ul>
+  <li style="font-style: italic;"><em>gnome-terminal</em></li>
+  <li style="font-style: italic;"><em>xterm</em></li>
+  <li style="font-style: italic;"><em>konsole</em></li>
+</ul>
+<p style="font-style: italic;"></p>
+<p>Unter <strong>macOS</strong> können Sie ebenfalls einfach eine Instanz der
+  <em>Terminal.app</em> starten.</p>
+<p><strong>Windows</strong> hat eine eigene Shell für das Windows
+  Betriebssystem. Da wir in diesem Kurs aber mit Linux (bzw. unixoiden Systemen,
+  wie macOS) arbeiten, müssen Sie zunächst <strong>WSL2 </strong>installieren.
+  Sie finden dazu ein eigenes DevToolbox-Modul in der linken Leiste. Dieser
+  Lernpfad setzt noch nicht voraus, dass Sie die Shell auf Ihrem eigenen lokalen
+  System verwenden. Sie können diesen Schritt also auch zunächst überspringen.
+  Im weiteren Verlauf der Bearbeitung wird Ihnen eine Shell über den Browser zur
+  Verfügung gestellt.</p>
+<p><span style="color: #993333;">ToDo: Screenshot aus den verschiedenen
+    Betriebssystemen</span></p>
+<p>Nach dem starten des Terminals erwartet sie der <strong>Prompt</strong> der
+  Shell, auch Befehlszeile genannt. Dieser kann viele Formen annehmen, sieht oft
+  aber folgendermaßen aus:</p>
+<pre
+  class="language-c"><code>&lt;benutzer:in&gt;@&lt;rechner&gt;:~$</code></pre>
+<p>Für den konkreten Nutzer <a
+    href="https://en.wikipedia.org/wiki/Foobar"><em>foo</em></a> der auf dem
+  System <em>bar</em> arbeiten wäre der Prompt also:</p>
+<pre class="language-c"><code>foo@bar:~$</code></pre>
+<p>Hinter dem $-Zeichen können nun Befehle eingegeben werden. Mit der
+  Enter-Taste bestätigen sie die Eingabe. Sie können die Shell beenden indem Sie
+  das Terminal-Fenster schließen oder indem Sie folgenden Befehl ausführen:</p>
+<pre class="language-c"><code>foo@bar:~$ exit</code></pre>
+<p>Alternativ können Sie die Tastenkombination <em>Strg+d</em> drücken.</p>
+<h6><strong>Aufbau von Befehlen</strong></h6>
+<p>Shell-Befehle folgen in der Regel dem gleichen Aufbau:</p>
+<pre class="language-c"><code>befehl [optionen] [argumente]</code></pre>
+<p>Der <em>exit</em>-Befehl aus aus der vorherigen Eingabe kommt beispielsweise
+  ohne Optionen oder Argumente aus.</p>
+<h6><strong>Praktische Übung 01 - Einfache Navigation</strong></h6>
+<p>Über den folgenden Link erreichen Sie die erste browserbasierte Übung.</p>
+<p><a
+    href="https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F01-shell-basics.ipynb"
+    target="_blank" rel="noopener">Übung 01</a></p>
+<p>In dieser Lernumgebung steht Ihnen ein Jupyter-Notebook mit <a
+    href="https://de.wikipedia.org/wiki/Bash_(Shell)">bash</a> zur Verfügung. In
+  dieser ersten Übung lernen Sie</p>
+<ul>
+  <li>die Befehle <em><strong>whoami</strong></em>,
+    <strong><em>pwd</em></strong>,
+    <em><strong>echo</strong></em>, <em><strong>ls</strong></em><em> </em>und
+    <em><strong>cd</strong></em></li>
+  <li>die Grundlagen des Dateisystems sowie von relativen und absoluten Pfaden
+  </li>
+  <li>die speziellen Verzeichniseinträge <em><strong>.</strong></em> (Punkt),
+    <em><strong>..</strong></em> (Doppelpunkt) und <em><strong>~</strong></em>
+    (Tilde)</li>
+  <li>erste Optionen von Befehlen, um die Funktionalität zu verändern</li>
+  <li>wie Argumente verwendet werden</li>
+</ul>
+<p></p>
+<h4>Dateien und Verzeichnisse verwalten</h4>
+<p>In der letzten Übung haben Sie bereits die Grundlagen des Dateisystems
+  kennengelernt.</p>
+<hr>
+<h6><strong>Optionaler Deep Dive</strong></h6>
+<p><img class="img-fluid"
+    src="https://moodle.fernuni-hagen.de/draftfile.php/3243/user/draft/727741407/deep-dive.png"
+    alt="Ein Forschungs-U-Boot strahlt mit einem Scheinwerfer einen Goldschatz an."
+    width="350"></p>
+<p>Wenn Sie sich für eine ausführliche Erläuterung zum Linux-Dateisystem und dem
+  Standard dahinter interessieren, dann schauen Sie folgendes Video:</p>
+<p><a href="https://www.youtube.com/watch?v=p9lCbFq8IPo"> Learning The Linux
+    File System 2025</a></p>
+<hr>
+<p>In diesem Abschnitt beschäftigen wir uns mit den wichtigsten Befehlen um
+  Dateien und Verzeichnisse zu verwalten. Das sind vor allem die Befehle, die
+  Sie in einer GUI über das Rechtsklickmenü erreichen. Dazu zählen unter anderem
+  das Kopieren, Ausschneiden, Löschen und Umbenennen von Dateien und
+  Verzeichnissen. Anders als bei einer grafischen Oberfläche, benötigen wir im
+  Terminal zusätzlich Befehle, um den Inhalt von Ordnern und Dateien anzuzeigen.
+</p>
+<h6><strong>Praktische Übung 02 - Dateien und Verzeichnisse verwalten</strong>
+</h6>
+<p>Über den folgenden Link erreichen Sie die zweite browserbasierte Übung.</p>
+<p><a
+    href="https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F02-shell-basics.ipynb"
+    target="_blank" rel="noopener">Übung 02</a></p>
+<p>In dieser Übung lernen Sie</p>
+<ul>
+  <li>die Befehle <em><strong>cp</strong></em>, <em><strong>mv</strong></em>,
+    <em><strong>rm</strong></em>, <em><strong>mkdir</strong></em>,
+    <em><strong>rmdir</strong></em>, <em><strong>touch </strong></em>und
+    <em><strong>cat</strong></em></li>
+  <li>dass manche Befehle mit besonderer Sorgfalt verwendet werden müssen</li>
+</ul>
+<p></p>
+<h4>Befehlsdokumentation und Hilfesysteme</h4>
+<p>In der letzten Einheit haben Sie einige neue Befehle kennengelernt. Am Ende
+  der letzten Übung sind Sie mit einem Fehler konfrontiert worden. Solche
+  Situationen, in denen Sie Hilfe benötigen, werden Ihnen immer
+  wieder begegnen. Auch wenn Sie einfach vergessen haben, wie genau diese eine
+  Option für diesen einen speziellen Befehl, den Sie nur einmal im Quartal
+  verwenden, aussah, benötigen Sie Hilfe. Genau für solche Situationen und Fälle
+  besitzen die allermeisten Befehle eine Dokumentation und Hilfe zur Nutzung,
+  welche direkt über das Terminal selbst aufgerufen werden kann. Um diese
+  Systeme zur Hilfe geht es in diesem Abschnitt.</p>
+<p>Die einfachste Form der Hilfe erreichen Sie durch die Option
+  <em><strong>--help</strong></em>.</p>
+<pre class="language-c"><code>foo@bar:~$ cat --help</code></pre>
+<p>Je nach Komplexität des Befehls variiert die Länge und der Detailgrad der
+  Ausgabe von <em><strong>--help</strong></em>. In den allermeisten Fällen sind
+  Sie gut beraten zuerst mit <em><strong>--help</strong></em> zu arbeiten und
+  erst wenn so keine Lösung zu finden ist, eine der folgenden Methoden zu
+  verwenden.</p>
+<p>Ein weiterer hilfreicher Befehl ist <em><strong>whatis</strong></em>. Damit
+  bekommen Sie zu einem anderen Befehl eine Kurzbeschreibung. Das ist besonders
+  hilfreich, wenn ein unbekannter Befehl oder ein Skript vorliegt. In solchen
+  Fällen sollte man natürlich immer zuerst prüfen, was die einzelnen Befehle
+  tun, bevor man sie blind auf dem System ausführt. In der kommenden Übung
+  werden wir mit diesen ersten beiden Methoden einige komplexe Befehle
+  analysieren.</p>
+<p>Sollten Sie je an zu dem Punkt kommen, an dem
+  <em><strong>--help</strong></em> und <em><strong>whatis</strong></em> nicht
+  mehr ausreichen, dann sollten Sie die <em><strong><a
+        href="https://de.wikipedia.org/wiki/Manpage" target="_blank"
+        rel="noopener">manpage</a></strong> </em>zu Rate ziehen. Dahinter steckt
+  die ausführliche Dokumentation eines Befehls in einer (mehr oder weniger)
+  standardisierten Form. Der name manpage leitet sich vom englischen <em>manual
+    ab</em>, was so viel wie Handbuch bedeutet. Diese Handbücher umfassen
+  oftmals weitaus mehr Informationen als die, die Sie über
+  <em><strong>--help</strong></em> in Erfahrung bringen können. Sie rufen eine
+  manpage folgendermaßen auf:</p>
+<pre class="language-c"><code>foo@bar:~$ man &lt;befehl&gt;</code></pre>
+<p>Statt eine Option, wie <em><strong>--help</strong></em>, ist
+  <em><strong>man</strong></em> ein eigener Befehl, der als Argument den Befehl
+  bekommt, für welchen er die manpage anzeigen soll. Da manpages in der Regel
+  relativ groß sind, werden sie normalerweise automatisch mit einem sogenannten
+  <em>pager</em> angezeigt. Im <strong>Lernpfad: Fortgeschrittene</strong>
+  werden wir uns den pager<em><strong> less</strong></em> näher anschauen. Falls
+  Sie jemals das Gefühl haben, auf einer manpage <em>gefangen</em> zu sein,
+  drücken Sie die Taste Q, damit sollten Sie in den meisten Fällen zum Terminal
+  zurückkehren.</p>
+<h6><strong>Praktische Übung 03 - Hilfesysteme</strong></h6>
+<p>Sie finden unter nachfolgendem Link wieder ein Jupyter Notebook.</p>
+<p><a
+    href="https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F03-shell-basics.ipynb"
+    target="_blank" rel="noopener">Übung 03</a></p>
+<p>In dieser Übung lernen Sie</p>
+<ul>
+  <li>wie Sie <em><strong>--help</strong></em> nutzen um ad hoc Hilfe zu
+    bekommen</li>
+  <li>wie Sie <em><strong>man</strong></em> benutzen, wenn es ausführlicher sein
+    muss</li>
+  <li>wie Sie mithilfe dieser Befehle und <em><strong>whatis</strong></em>
+    unbekannte Befehle analysieren können</li>
+  <li>wie Sie Probleme dadurch selbstständig und ohne weitere Ressourcen lösen
+    können</li>
+</ul>
+<p></p>
+<h4>Rechte, Nutzer:innen, Gruppen und der sudo-Befehl</h4>
+<p>Alle gängigen Betriebssysteme haben ein Rechtesystem, mit dem der Zugriff auf
+  Dateien und Funktionalitäten verwaltet wird. Unter Unix gibt es standardmäßig
+  immer mindestens einen Nutzer, den <strong>root</strong>-Nutzer. Daneben
+  können beliebig viele weitere Nutzer:innen angelegt werden. Diese normalen
+  Nutzer:innen haben im Vergleich zum root-Nutzer eingeschränkte Rechte.
+  Beispielsweise haben sie keinen Zugriff auf bestimmte Systemordner und
+  -dateien. Diese Regulierung ist vor allem zum Schutz des Systems vorhanden.
+  Eine normale Nutzerin soll bspw. nicht die Möglichkeit haben Systemdateien zu
+  verändern oder zu löschen, wodurch die Funktionalität für alle Nutzer:innen
+  beeinflusst würde. Stattdessen besitzen Nutzer:innen ein sogenanntes
+  <strong>home</strong>-Verzeichnis, einen eigenen Unterordner im Dateisystem,
+  in dem sie uneingeschränkte Rechte besitzen. Dateien und Ordner, die innerhalb
+  dieses Ordners angelegt werden, gehören dem/der Nutzer:in. Das
+  home-Verzeichnis befindet sich unter:</p>
+<pre class="language-c"><code>/home/&lt;benutzer:in&gt;/</code></pre>
+<p>Neben den individuellen Rechten gibt es eine weitere Ebene zur Verwaltung von
+  Zugriffsrechten: die Verwendung von Gruppen. Jede Datei und jedes Verzeichnis
+  gehören daher nicht nur einem/einer Nutzer:in, sondern sind auch einer Gruppe
+  zugeordnet. Standardmäßig besitzt jeder/jede Nutzer:in eine eigene Gruppe, die
+  für neu erstellte Dateien und Verzeichnisse verwendet wird und in der er/sie
+  das einzige Mitglied ist. Darüber hinaus gibt es Rechte für alle anderen
+  Nutzer:innen, also für diejenigen, denen die betreffende Datei oder das
+  Verzeichnis weder gehört noch die Teil der zugehörigen Gruppe sind. Für diese
+  drei Kategorien von Zugriffsrechten gibt es jeweils drei Arten von Rechten:
+  Leserechte, Schreibrechte und Ausführungsrechte.</p>
+<p><span style="color: #993333;">ToDo: DeepDive Video oder Artikel zu
+    Oktalkodierung</span></p>
+<p>Es gibt gewisse Funktionen die ausschließlich vom root-Nutzer ausgeführt
+  werden können. Dazu zählen bspw. die Verwaltung von Gruppen, die Installation
+  systemweiter Software oder die Verwaltung von Diensten. Um diese Einschränkung
+  temporär zu umgehen, gibt es den <em><strong>sudo</strong></em>-Befehl. Dabei
+  steht sudo für <em>superuser do</em>. Nutzer:innen, die <em>sudo</em>-Rechte
+  besitzen, haben, je nach Konfiguration erweiterte Rechte, in der Regel sogar
+  die gleichen Rechte, wie der root-Nutzer. Der sudo-Befehl wird dem Befehl, der
+  erweiterte Rechte erfordert vorne angestellt.</p>
+<pre class="language-c"><code>foo@bar:~$ sudo &lt;befehl&gt;</code></pre>
+<p>Wenn Sie den sudo-Befehl zum ersten Mal in einem Terminal verwenden, müssen
+  Sie die Nutzung mit Ihrem Passwort authentifizieren. Danach können sie für
+  eine bestimmte Zeit (~5min) Befehle mit sudo in diesem Terminal ausführen,
+  bevor Sie erneut Ihr Passwort bestätigen müssen.</p>
+<p>Die Rechte für den Zugriff über sudo werden in der Datei
+  <em>/etc/sudoers</em> verwaltet. In dieser Datei befindet sich eine Gruppe,
+  oft mit dem Namen <em>sudo</em> oder <em>wheel</em> (von <em>to take the</em>
+  wheel, <em>das Steuer übernehmen</em>), die für die Erweiterung der Rechte von
+  einfachen Nutzer:innen vorgesehen ist. Wenn Sie nun Teil der dieser Gruppe
+  sind, erhalten sie darüber die Möglichkeit den sudo-Befehl zu verwenden.</p>
+<h6><strong>Praktische Übung 04 - Rechteverwaltung</strong></h6>
+<p>Auch für die letzte Übung finden Sie unter nachfolgendem Link wieder ein
+  Jupyter Notebook.</p>
+<p><a
+    href="https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F04-shell-basics.ipynb"
+    target="_blank" rel="noopener">Übung 04</a></p>
+<p>In dieser Übung lernen Sie,</p>
+<ul>
+  <li>wie Sie mithilfe von <em><strong>ls</strong></em> die Zugriffsrechte für
+    Dateien und Verzeichnissen auslesen können</li>
+  <li>wie Sie mit <em><strong>groups</strong></em> herausfinden können, in
+    welchen Gruppen Sie sind</li>
+  <li>wie Sie mit dem Befehl <em><strong>chmod</strong></em> Rechte anpassen
+    können</li>
+</ul>
+<p></p>
+<hr>
+<h4>Fazit</h4>
+<p>Über diesen Lernpfad haben Sie die Grundlagen der Shell-Nutzung gelernt. Sie
+  können nun mit dem <strong>Lernpfad: Fortgeschrittene</strong> weiter machen.
+  Sollten Sie Windows benutzen, benötigen Sie dafür WSL2. Sie finden eine
+  Installationsanleitung sowie weitere Hilfestellung in der linken Leiste unter
+  <strong>WSL2 Tutorial</strong>.</p>

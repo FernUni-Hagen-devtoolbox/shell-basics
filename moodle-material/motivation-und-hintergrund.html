@@ -1,0 +1,123 @@
+<div class="alert alert-info">
+  <h5><strong>Lernziele</strong></h5>
+  <p>Nach dem Lesen dieses Abschnitts</p>
+  <ul>
+    <li>können Sie die Relevanz der Shell für die Informatik nachvollziehen</li>
+    <li>kennen Sie die Vorteile der Shell-Nutzung</li>
+    <li>verstehen, wo die Shell im gesamten Systemkontext verortet ist</li>
+    <li>kennen Sie den Unterschied zwischen Shell, Terminal und Prompt</li>
+  </ul>
+</div>
+<h4> </h4>
+<h4>Warum beschäftigen wir uns mir der Shell?</h4>
+<p>Wer in der Informatik mit realen Systemen arbeitet, stößt früher oder später
+  auf Umgebungen, die sich nicht <em>anklicken</em> lassen: Server-, Cloud- und
+  Hochleistungsrechner bieten in der Regel keine grafische Oberfläche (GUI) an
+  und können nur über eine Shell genutzt werden. Aber auch auf dem lokalen
+  System ist der sichere Umgang mit der Shell Voraussetzung für die effektive
+  und vor allem effiziente Nutzung vieler moderner IT-Werkzeuge, aber auch für
+  die Erstellung von Entwicklungsumgebungen und die Installation von Software
+  sowie Infrastruktur. Den Umgang mit der Shell zu lernen ist also kein
+  Selbstzweck. Außerdem ist eine sichere Nutzung der Shell Grundlage für alle
+  weiteren Selbstlernmodule von DevToolbox.</p>
+<p>Die Shell erleichtert wiederkehrende Aufgaben besonders dann, wenn viele
+  Dateien, große Datenmengen oder wiederholte Abläufe im Spiel sind: etwa beim
+  konsistenten Umbenennen ganzer Dateisammlungen, beim automatisierten
+  Aufbereiten von Log-Dateien, beim Zusammenführen oder Konvertieren von
+  Dokumenten oder beim reproduzierbaren Herunterladen und Verarbeiten von
+  Datenquellen.</p>
+<p>Bei der Nutzung einer GUI werden diese Aufgaben durch eine Reihe von Klicks
+  in verschiedenen Fenstern und Menüs erreicht. Daraus ergeben sich
+  einige Nachteile, die vor allem dann deutlich werden, wenn solche Aufgaben
+  häufig durchgeführt werden müssen. Dem gegenüber stehen die Vorteile der
+  Shell-Nutzung:</p>
+<h6><strong>Effizienz &amp; </strong><strong>Wiederverwendbarkeit</strong>:</h6>
+<p>Wiederkehrende Abläufe können in einer kurzen und eindeutig beschreibbaren
+  Form festgehalten und bei Bedarf automatisiert ausgeführt werden. Dadurch
+  entfällt die Notwendigkeit, dieselben Schritte jedes Mal manuell zu
+  wiederholen, was nicht nur Zeit spart, sondern auch die Fehleranfälligkeit
+  gegenüber dem händischen Vorgehen deutlich reduziert. Die Wiederverwendbarkeit
+  solcher Abläufe erstreckt sich auf alle Systeme mit Shell-Unterstützung.
+  Dadurch stellt die Shell im Kontext verschiedener Systeme eine Art kleinsten
+  gemeinsamen Nenner dar.</p>
+<h6><strong>Reproduzierbarkeit &amp; Nachvollziehbarkeit</strong>:</h6>
+<p>Arbeitsabläufe können so dokumentiert werden, dass sie später (oder von
+  anderen) in gleicher Weise wiederholt werden können. Das ist zentral für
+  Fehlersuche, wissenschaftliches Arbeiten sowie die Arbeit im Team.</p>
+<h6><strong>Flexibilität &amp; Kombinierbarkeit</strong>:</h6>
+<p>Shell-Werkzeuge lassen sich so miteinander verbinden, dass aus einfachen
+  Bausteinen komplexe Verarbeitungsketten entstehen. Damit wird die Shell zu
+  einer <em>Schaltzentrale</em> für Werkzeuge und Prozesse.</p>
+<p>Grafische Oberflächen sind hervorragend, um intuitiv und ohne großes
+  Vorwissen mit einem System zu interagieren. Sobald Abläufe jedoch häufiger
+  auftreten, dokumentiert, geteilt oder auf andere Systeme übertragen werden
+  sollen, werden Klickfolgen schnell unübersichtlich. Die Shell ergänzt die GUI
+  daher nicht als <em>Gegenteil</em>, sondern als leistungsfähige Alternative
+  für skalierbare und nachvollziehbare Arbeitsweisen.</p>
+<p>Sie kennen nun die Vorteile der Shell-Nutzung und erkennen die große Relevanz
+  für die Informatik. Vielleicht fragen Sie sich an dieser Stelle aber immer
+  noch, was eine Shell überhaupt sein soll. Diese Frage beantworten wir im
+  nächsten Abschnitt.<span style="color: #993333;"></span></p>
+<h4>Was ist eine Shell und was nicht?</h4>
+<p>Die Shell ist eine textbasierte Schnittstelle zum Betriebssystem. Dabei
+  ist<em> d</em><em>ie Shell </em>kein einzelnes, fest definiertes Programm,
+  sondern eine ganze Klasse von Programmen mit ähnlicher Funktion. Es existieren
+  unterschiedliche Shells, etwa bash, zsh (heute häufig Standard unter macOS)
+  oder fish (mit Fokus auf Bedienkomfort). Sie unterscheiden sich unter anderem
+  in Voreinstellungen, Komfortfunktionen und teils auch in Details der
+  Skript-Sprache. Die Grundidee bleibt jedoch gleich: Eine Shell stellt eine
+  textbasierte Schnittstelle bereit, um Programme zu starten und Arbeitsabläufe
+  zu automatisieren.</p>
+<p>Die Programme, die sie startet rufen den Betriebssystemkern meistens
+  <strong>Kernel</strong> genannt auf. Der Kernel verwaltet Hardware und stellt
+  grundlegende Dienste bereit. Der Zugriff geschieht über definierte
+  Schnittstellen.</p>
+<p>Die nachfolgende Abbildung (entnommen aus dem Buch <em>Linux kurz &amp; gut:
+    Die wichtigen Befehle</em>, zu finden unter dem Reiter <em>Lernressourcen
+    Text</em>) veranschaulicht die Verortung der Shell im Gesamtkontext. </p>
+<p><img class="img-fluid"
+    src="https://moodle.fernuni-hagen.de/draftfile.php/3243/user/draft/90729914/4_Schichten_von_Linux-Linux_kurz_und_gut_S20.png"
+    alt="Abbildung zu den Schichten von Kernel hin zu GUI" width="700"
+    height="438"></p>
+<p>Der Zugriff auf die Shell erfolgt über ein <strong>Terminal</strong> (bzw.
+  Terminalemulator), denn die Shell selbst hat keine eigene Schnittstelle für
+  Nutzer:innen. Auch Programme mit GUI nutzen im Hintergrund die Shell. Sie
+  können dies testen, indem Sie ein solches Programm statt bspw. über das
+  Startmenü zu öffnen, über ein Terminal aufrufen. Dort werden Sie die Ausgabe
+  der Software sehen, die als Seiteneffekt der regulären Nutzung über die GUI
+  entsteht.</p>
+<p>Wenn Sie ein Terminal starten sehen Sie eine Eingabeaufforderung auch
+  <strong>Prompt</strong> oder Befehlszeile genannt. Die Form bzw. der Inhalt
+  unterscheidet sich von System zu System, häufig sieht der Prompt
+  folgendermaßen aus:</p>
+<pre
+  class="language-bash"><code>&lt;benutzer:in&gt;@&lt;rechner&gt;:~$</code></pre>
+<p>Hinter dem $-Zeichen erfolgt nun die Eingabe. Das ist der Startpunkt für die
+  Shell-Nutzung.</p>
+<h4>Einordnung: Linux, Open Source und die Rolle der Shell</h4>
+<p>In diesem Kurs nutzen wir das Betriebssystem Linux. Machen Sie sich keine
+  Sorge, sollten Sie Windows oder macOS nutzen. Wir stellen in diesem Kurs
+  zunächst alle Lernressourcen so bereit, dass Sie sie von jedem Betriebssystem
+  aus per Browser nutzen können. Linux ist der de facto Standard für Server-,
+  Cloud- und Hochleistungsrechner und stellt damit die Grundlage für das gesamte
+  Internet dar. Diese Dominanz ist nicht zuletzt darauf zurückzuführen, dass es
+  sich bei Linux um <em>Open Source Software</em> handelt, also Software, die
+  quelloffen und kostenfrei zur Verfügung steht. Die Shell spielt darin eine
+  zentrale Rolle, weil sie als stabile, ressourcenschonende und gut
+  automatisierbare Schnittstelle funktioniert und über verschiedene Systeme
+  hinweg gleich funktioniert und wiederverwendbar ist.</p>
+<h4>Verantwortungsvoller Umgang</h4>
+<p>Die Shell ist ein äußerst mächtiges Werkzeug, das jedoch auch destruktiv
+  eingesetzt werden kann. Mit einem einzigen Befehl (sofern Sie über die
+  entsprechenden Berechtigungen im Betriebssystem verfügen) ist es möglich, das
+  gesamte System unwiderruflich zu löschen, ohne dass eine Nachfrage zur
+  Bestätigung erfolgt. Darüber hinaus sollten Sie stets datenschutzrechtliche
+  Aspekte berücksichtigen. Insbesondere bei administrativem Zugriff auf Server,
+  auf denen auch Daten anderer Nutzer:innen gespeichert sind, ist ein
+  verantwortungsvoller Umgang mit diesen Daten unerlässlich.</p>
+<h4>Fazit</h4>
+<p>Sie kennen nun die wichtigsten Gründe, warum die Shell in vielen
+  informatischen Kontexten eine zentrale Rolle spielt, wie sie im System
+  verortet ist und haben erste grundlegende Informationen zur Nutzung erhalten.
+  Um das Selbstlernmodul fortzusetzen, springen Sie als nächstes zum Reiter
+  <strong>Lernpfad: Anfänger:innen</strong>. </p>

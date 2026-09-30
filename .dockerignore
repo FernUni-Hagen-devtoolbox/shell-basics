@@ -1,0 +1,14 @@
+.git
+.jupyter
+.env
+**/.ipynb_checkpoints
+**/.bash_history
+**/.lesshst
+**/.ipython
+**/.local
+**/.npm
+konzept
+lesson-content/geheim.txt
+lesson-content/meine_dateien
+lesson-content-runtime
+moodle-material

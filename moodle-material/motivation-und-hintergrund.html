@@ -4,18 +4,18 @@
   <ul>
     <li>können Sie die Relevanz der Shell für die Informatik nachvollziehen</li>
     <li>kennen Sie die Vorteile der Shell-Nutzung</li>
-    <li>verstehen, wo die Shell im gesamten Systemkontext verortet ist</li>
+    <li>verstehen Sie, wo die Shell im gesamten Systemkontext verortet ist</li>
     <li>kennen Sie den Unterschied zwischen Shell, Terminal und Prompt</li>
   </ul>
 </div>
 <h4> </h4>
-<h4>Warum beschäftigen wir uns mir der Shell?</h4>
+<h4>Warum beschäftigen wir uns mit der Shell?</h4>
 <p>Wer in der Informatik mit realen Systemen arbeitet, stößt früher oder später
   auf Umgebungen, die sich nicht <em>anklicken</em> lassen: Server-, Cloud- und
   Hochleistungsrechner bieten in der Regel keine grafische Oberfläche (GUI) an
   und können nur über eine Shell genutzt werden. Aber auch auf dem lokalen
   System ist der sichere Umgang mit der Shell Voraussetzung für die effektive
-  und vor allem effiziente Nutzung vieler moderner IT-Werkzeuge, aber auch für
+  und vor allem effiziente Nutzung vieler moderner IT-Werkzeuge und für
   die Erstellung von Entwicklungsumgebungen und die Installation von Software
   sowie Infrastruktur. Den Umgang mit der Shell zu lernen ist also kein
   Selbstzweck. Außerdem ist eine sichere Nutzung der Shell Grundlage für alle
@@ -29,17 +29,16 @@
 <p>Bei der Nutzung einer GUI werden diese Aufgaben durch eine Reihe von Klicks
   in verschiedenen Fenstern und Menüs erreicht. Daraus ergeben sich
   einige Nachteile, die vor allem dann deutlich werden, wenn solche Aufgaben
-  häufig durchgeführt werden müssen. Dem gegenüber stehen die Vorteile der
+  häufig durchgeführt werden müssen. Demgegenüber stehen die Vorteile der
   Shell-Nutzung:</p>
 <h6><strong>Effizienz &amp; </strong><strong>Wiederverwendbarkeit</strong>:</h6>
 <p>Wiederkehrende Abläufe können in einer kurzen und eindeutig beschreibbaren
   Form festgehalten und bei Bedarf automatisiert ausgeführt werden. Dadurch
   entfällt die Notwendigkeit, dieselben Schritte jedes Mal manuell zu
   wiederholen, was nicht nur Zeit spart, sondern auch die Fehleranfälligkeit
-  gegenüber dem händischen Vorgehen deutlich reduziert. Die Wiederverwendbarkeit
-  solcher Abläufe erstreckt sich auf alle Systeme mit Shell-Unterstützung.
-  Dadurch stellt die Shell im Kontext verschiedener Systeme eine Art kleinsten
-  gemeinsamen Nenner dar.</p>
+  gegenüber dem händischen Vorgehen deutlich reduziert. Viele Grundideen lassen
+  sich auf andere Systeme mit Shell-Unterstützung übertragen. Befehle und
+  Voreinstellungen können sich jedoch unterscheiden.</p>
 <h6><strong>Reproduzierbarkeit &amp; Nachvollziehbarkeit</strong>:</h6>
 <p>Arbeitsabläufe können so dokumentiert werden, dass sie später (oder von
   anderen) in gleicher Weise wiederholt werden können. Das ist zentral für
@@ -68,10 +67,10 @@
   Skript-Sprache. Die Grundidee bleibt jedoch gleich: Eine Shell stellt eine
   textbasierte Schnittstelle bereit, um Programme zu starten und Arbeitsabläufe
   zu automatisieren.</p>
-<p>Die Programme, die sie startet rufen den Betriebssystemkern meistens
-  <strong>Kernel</strong> genannt auf. Der Kernel verwaltet Hardware und stellt
-  grundlegende Dienste bereit. Der Zugriff geschieht über definierte
-  Schnittstellen.</p>
+<p>Von der Shell gestartete Programme greifen über definierte Schnittstellen auf
+  Dienste des Betriebssystemkerns zu. Dieser wird meistens
+  <strong>Kernel</strong> genannt. Der Kernel verwaltet Hardware und stellt
+  grundlegende Dienste bereit.</p>
 <p>Die nachfolgende Abbildung (entnommen aus dem Buch <em>Linux kurz &amp; gut:
     Die wichtigen Befehle</em>, zu finden unter dem Reiter <em>Lernressourcen
     Text</em>) veranschaulicht die Verortung der Shell im Gesamtkontext. </p>
@@ -81,11 +80,9 @@
     height="438"></p>
 <p>Der Zugriff auf die Shell erfolgt über ein <strong>Terminal</strong> (bzw.
   Terminalemulator), denn die Shell selbst hat keine eigene Schnittstelle für
-  Nutzer:innen. Auch Programme mit GUI nutzen im Hintergrund die Shell. Sie
-  können dies testen, indem Sie ein solches Programm statt bspw. über das
-  Startmenü zu öffnen, über ein Terminal aufrufen. Dort werden Sie die Ausgabe
-  der Software sehen, die als Seiteneffekt der regulären Nutzung über die GUI
-  entsteht.</p>
+  Nutzer:innen. Viele Programme lassen sich auch aus einer Shell starten. Dabei
+  können Ausgaben sichtbar werden, die beim Start über eine grafische Oberfläche
+  verborgen bleiben.</p>
 <p>Wenn Sie ein Terminal starten sehen Sie eine Eingabeaufforderung auch
   <strong>Prompt</strong> oder Befehlszeile genannt. Die Form bzw. der Inhalt
   unterscheidet sich von System zu System, häufig sieht der Prompt
@@ -101,17 +98,17 @@
   aus per Browser nutzen können. Linux ist der de facto Standard für Server-,
   Cloud- und Hochleistungsrechner und stellt damit die Grundlage für das gesamte
   Internet dar. Diese Dominanz ist nicht zuletzt darauf zurückzuführen, dass es
-  sich bei Linux um <em>Open Source Software</em> handelt, also Software, die
-  quelloffen und kostenfrei zur Verfügung steht. Die Shell spielt darin eine
+  sich bei Linux um <em>Open Source Software</em> handelt, deren Quellcode unter
+  den Bedingungen einer freien Lizenz zugänglich ist. Die Shell spielt darin eine
   zentrale Rolle, weil sie als stabile, ressourcenschonende und gut
   automatisierbare Schnittstelle funktioniert und über verschiedene Systeme
-  hinweg gleich funktioniert und wiederverwendbar ist.</p>
+  hinweg ähnliche Arbeitsweisen ermöglicht.</p>
 <h4>Verantwortungsvoller Umgang</h4>
 <p>Die Shell ist ein äußerst mächtiges Werkzeug, das jedoch auch destruktiv
   eingesetzt werden kann. Mit einem einzigen Befehl (sofern Sie über die
-  entsprechenden Berechtigungen im Betriebssystem verfügen) ist es möglich, das
-  gesamte System unwiderruflich zu löschen, ohne dass eine Nachfrage zur
-  Bestätigung erfolgt. Darüber hinaus sollten Sie stets datenschutzrechtliche
+  entsprechenden Berechtigungen im Betriebssystem verfügen) ist es möglich,
+  große Mengen zugänglicher Daten ohne Papierkorb oder Nachfrage zu löschen.
+  Darüber hinaus sollten Sie stets datenschutzrechtliche
   Aspekte berücksichtigen. Insbesondere bei administrativem Zugriff auf Server,
   auf denen auch Daten anderer Nutzer:innen gespeichert sind, ist ein
   verantwortungsvoller Umgang mit diesen Daten unerlässlich.</p>

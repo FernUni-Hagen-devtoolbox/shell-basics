@@ -1,24 +1,51 @@
-# shell-basics
+# Shell Basics
 
-### Übung 01
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F01-shell-basics.ipynb)
+Dieses Repository enthält vier praktische Übungen zu den Grundlagen der Linux-Shell. Die Übungen werden in MyBinder bearbeitet. Jede Übung öffnet das passende Jupyter Notebook auf der linken Seite und ein vorbereitetes Terminal auf der rechten Seite.
 
-### Übung 02
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F02-shell-basics.ipynb)
+## Übungen in MyBinder
 
-### Übung 03
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F03-shell-basics.ipynb)
+| Kursteil | MyBinder starten |
+| --- | --- |
+| Übung 1: Navigation im Dateisystem | [Übung 1 öffnen](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/main?urlpath=lab/workspaces/uebung-01) |
+| Übung 2: Dateien und Verzeichnisse | [Übung 2 öffnen](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/main?urlpath=lab/workspaces/uebung-02) |
+| Übung 3: Hilfesysteme | [Übung 3 öffnen](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/main?urlpath=lab/workspaces/uebung-03) |
+| Übung 4: Rechte und Skripte | [Übung 4 öffnen](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/main?urlpath=lab/workspaces/uebung-04) |
 
-### Übung 04
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FernUni-Hagen-devtoolbox/shell-basics/HEAD?urlpath=%2Fdoc%2Ftree%2F04-shell-basics.ipynb)
+Beim ersten Aufruf eines neuen Repository-Stands muss MyBinder die Umgebung zunächst erstellen. Dieser Vorgang kann einige Minuten dauern.
+
+Eine MyBinder-Sitzung ist zeitlich begrenzt. Änderungen innerhalb der Sitzung stehen nach dem Beenden der Umgebung nicht mehr zur Verfügung.
+
+## Aufbau des Repositorys
+
+- `lesson-content/` enthält die vier Jupyter Notebooks und die benötigten Übungsdateien.
+- `.binder/Dockerfile` beschreibt die MyBinder-Umgebung mit Nano, Hilfeseiten und Bash-Kernel.
+- `.binder/workspaces/` enthält die vorbereiteten JupyterLab-Ansichten für die einzelnen Übungen.
+- `Makefile` stellt Befehle zum lokalen Bauen und Testen der Umgebung bereit.
 
 ## Lokale Entwicklung
 
-Für schnelle Änderungen an den Notebooks und Ressourcen gibt es jetzt ein kleines Makefile. Der lokale Workflow baut das Image und startet JupyterLab mit einer frischen Kopie von `lesson-content/`, damit die Laufzeitumgebung von den Quelldateien getrennt bleibt.
+Für einen lokalen Test werden Docker und Make benötigt. Das Binder-kompatible Image wird mit folgendem Befehl erstellt:
 
 ```bash
 make build
+```
+
+Anschließend kann die erste Übung gestartet werden:
+
+```bash
 make run
 ```
 
-Der Browser öffnet dann JupyterLab mit der kopierten Umgebung als Startverzeichnis. Wenn Sie nur eine Shell im Image brauchen, verwenden Sie `make shell`. Beide Befehle erzeugen die Kopie unter `lesson-content-runtime/`; `make stop` beendet den Container und entfernt diese Kopie wieder.
+Ein anderer Workspace wird über seinen Namen ausgewählt:
+
+```bash
+make run WORKSPACE=uebung-03
+```
+
+JupyterLab ist danach unter `http://127.0.0.1:8888` erreichbar. Der laufende Container wird mit folgendem Befehl beendet:
+
+```bash
+make stop
+```
+
+Die Umgebung enthält Nano, Shell-Hilfeseiten und einen Bash-Kernel.
